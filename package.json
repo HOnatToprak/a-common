@@ -1,0 +1,24 @@
+{
+  "name": "a-common",
+  "version": "0.0.0",
+  "description": "",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^4.10.0",
+    "@typescript-eslint/parser": "^4.10.0",
+    "eslint": "^7.16.0",
+    "typescript": "^4.1.3"
+  },
+  "files": [
+    "build"
+  ],
+  "dependencies": {
+    "superstruct": "^0.13.1"
+  }
+}
