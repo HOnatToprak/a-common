@@ -9,3 +9,7 @@ export const LoginRequest = object({
 });
 
 export type LoginRequest = Infer<typeof LoginRequest>
+
+export type LoginResponse = {
+    Token: string
+}
