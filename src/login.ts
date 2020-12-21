@@ -7,7 +7,7 @@ export const Password = size(string(), 5, 20);
 export const LoginRequest = refine(object({
     username: Username,
     password: Password,
-}), "MyRef", _ => false);
+}), "MyRef", value => value.username.length + value.password.length > 8);
 
 export type LoginRequest = Infer<typeof LoginRequest>
 
