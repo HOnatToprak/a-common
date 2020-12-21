@@ -1,12 +1,13 @@
-import {Infer, object, size, string} from "superstruct";
+import {Infer, object, refine, size, string} from "superstruct";
 
-export const Username = size(string(), 6, 15);
-export const Password = size(string(), 8, 20);
+export const Username = size(string(), 3, 15);
+export const Password = size(string(), 5, 20);
 
-export const LoginRequest = object({
+
+export const LoginRequest = refine(object({
     username: Username,
     password: Password,
-});
+}), "MyRef", _ => false);
 
 export type LoginRequest = Infer<typeof LoginRequest>
 
